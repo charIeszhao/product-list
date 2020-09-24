@@ -6,6 +6,7 @@
   <input id="in-stock" type="checkbox" [(ngModel)]="isShowInStock" (change)="onSearch()">
   <label for="in-stock">In Stock products only</label>
 </div>
+<p *ngIf="showNoProductMessage">No products found.</p>
 <div class="list-wrapper" *ngFor="let item of this.productList">
   <div class="category" *ngIf="item.products.length">
     <p>{{ item.category }}</p>
